@@ -1,0 +1,88 @@
+*{
+    color: white;
+}
+
+body, html{
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.nav{
+    height: 11vh;
+    width: 100vw;
+    background-color: transparent;
+    display: flex;
+    gap: 80px;
+    position: fixed;
+    z-index: 100;
+}
+
+.search{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    font-family: 'Chillax', sans-serif;
+}
+
+.logo{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo > p{
+    font-family: "Rubik Doodle Shadow", "san sarif";
+    font-size: 55px;
+}
+
+.links{
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 35px;
+}
+
+.links > a{
+    text-decoration: none;
+    font-family: 'Chillax', sans-serif;
+}
+
+.signIn{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.signIn > a > button{
+    height: 40px;
+    width: 65px;
+    border-radius: 20px;
+    border: transparent;
+    background-color: white;
+    color: black;
+    font-family: 'Chillax', sans-serif;
+    transition: 0.1s ease-out;
+}
+
+.signIn > a > button:hover{
+    background-color: #2196f3;
+    color: white;
+    transition: 0.1s ease-in;
+}
+
+.bg{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: url(./images/universe.jpg);
+    background-size: cover;
+}
+
+/*Underline animation for links in navbar.*/
