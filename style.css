@@ -36,7 +36,7 @@ body, html{
 }
 
 .logo > p{
-    font-family: "Rubik Doodle Shadow", "san sarif";
+    font-family: "Chillax", "san sarif";
     font-size: 55px;
 }
 
@@ -69,6 +69,8 @@ body, html{
     color: black;
     font-family: 'Chillax', sans-serif;
     transition: 0.1s ease-out;
+    display: inline-block;
+    position: relative;
 }
 
 .signIn > a > button:hover{
@@ -77,12 +79,115 @@ body, html{
     transition: 0.1s ease-in;
 }
 
-.bg{
+
+#main{
     height: 100%;
     width: 100%;
-    position: fixed;
+    position: relative;
     background: url(./images/universe.jpg);
     background-size: cover;
 }
 
-/*Underline animation for links in navbar.*/
+/*Underline animation for links in navbar -------------------------*/
+
+.links > a{
+    display: inline-block;
+    position: relative;
+}
+
+.links > a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.links > a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/*-------------------------------------------------------------------*/
+
+
+/*Page 1 css --------------------------------------------------------*/
+
+.page1{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page1 > .heading{
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+.page1 > .heading > p{
+    margin: 10px;
+    margin-left: 20px;
+    -webkit-text-stroke: 1px;
+}
+
+
+/*Revolving Ball animation---------------------------------------------*/
+
+.revolvingArrow1{
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 10px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    
+
+    animation-name: revolvingArrow1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.revolvingArrow2{
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-bottom: 10px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+
+    animation-name: revolvingArrow2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes revolvingArrow1{
+    0% {top: 0; left: 0; rotate: 720deg;}
+    25% {top: 0; left: 100%; rotate: 45deg;}
+    50% {top: 100%; left: 100%; rotate: 120deg;}
+    75% {top: 100%; left: 0; rotate: 225deg;}
+    100% {top: 0; left: 2px; rotate: 360deg;}
+}
+
+@keyframes revolvingArrow2{
+    0% {top: 100%; right: 0; rotate: 720deg;} 
+    25% {top: 100%; right: 100%; rotate: 45deg;}
+    50% {top: 0; right: 100%; rotate: 120deg;}
+    75% {top: 0; right: 0; rotate: 225deg;}
+    100% {top: 100%; right: 0; rotate: 360deg;}
+}
+/*--------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------*/
